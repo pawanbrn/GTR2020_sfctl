@@ -25,7 +25,7 @@ namespace XUnitTestProject1.TestScripts.Category1
         public void FailedTest1()
         {
             Assert.False(true);
-            Output.WriteLine("Test Failed1");
+            //Output.WriteLine("Test Failed1");
         }
     }
 }
