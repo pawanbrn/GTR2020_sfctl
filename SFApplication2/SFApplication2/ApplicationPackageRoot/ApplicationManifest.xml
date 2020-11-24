@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="SFApplication2Type" ApplicationTypeVersion="1.0.4" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="SFApplication2Type" ApplicationTypeVersion="1.0.5" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="WebApp21_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
     <Parameter Name="WebApp21_InstanceCount" DefaultValue="-1" />
@@ -10,7 +10,7 @@
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="WebApp21Pkg" ServiceManifestVersion="1.0.4" />
+    <ServiceManifestRef ServiceManifestName="WebApp21Pkg" ServiceManifestVersion="1.0.5" />
     <ConfigOverrides />
     <EnvironmentOverrides CodePackageRef="code">
       <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[WebApp21_ASPNETCORE_ENVIRONMENT]" />

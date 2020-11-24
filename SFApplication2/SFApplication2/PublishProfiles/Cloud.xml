@@ -20,7 +20,7 @@
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="sfclustertestrun.eastus.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="7F0E43DA9FD19243DECD0FBF710ADB3D035AF668" FindType="FindByThumbprint" FindValue="7F0E43DA9FD19243DECD0FBF710ADB3D035AF668" StoreLocation="CurrentUser" StoreName="My" />
+  <ClusterConnectionParameters ConnectionEndpoint="gtr2020-clustername.southcentralus.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="C5650F6110C19F25D4ED29A42DFC792BC7D81781" FindType="FindByThumbprint" FindValue="C5650F6110C19F25D4ED29A42DFC792BC7D81781" StoreLocation="CurrentUser" StoreName="My" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
   <CopyPackageParameters CompressPackage="true" />
   <UpgradeDeployment Mode="UnmonitoredAuto" Enabled="true">
