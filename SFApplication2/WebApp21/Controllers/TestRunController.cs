@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using WebApp21.Facades;
 
 namespace WebApp21.Controllers
@@ -12,7 +8,7 @@ namespace WebApp21.Controllers
     [ApiController]
     public class TestRunController : ControllerBase
     {
-        TestFacade _facade = new TestFacade();
+        readonly TestFacade _facade = new TestFacade();
 
         [HttpGet]
         public string Get()
@@ -23,11 +19,11 @@ namespace WebApp21.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] DTO dto)
         {
-            var listResults = new List<string>();
-
-            listResults =  _facade.RunTestsAsync(dto);
-            var result = new ObjectResult(new { statusCode = FacadeStatusCode.Created, currentDate = DateTime.Now, result = listResults });
-            result.StatusCode = (int)FacadeStatusCode.Created;
+            var listResults = _facade.RunTestsAsync(dto);
+            var result = new ObjectResult(new
+            {
+                statusCode = FacadeStatusCode.Created, currentDate = DateTime.Now, result = listResults
+            }) {StatusCode = (int) FacadeStatusCode.Created};
             return result;
         }
 
